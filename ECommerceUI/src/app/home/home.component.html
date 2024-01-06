@@ -1,7 +1,7 @@
 <div class="my-container mx-auto">
 
     <div class="mb-4 my-shadow my-rounded-corner overflow-hidden" *ngFor="let suggestedProduct of suggestedProducts">
-        <div class="product-baner position-relative">
+        <div class="product-baner position-relative" *ngIf="suggestedProduct.category.id>0">
             <button type="button" class="btn btn-outline-light btn-lg">Shop Now</button>
 
             <img src="../../assets/Images/{{suggestedProduct.banerimage}}" class="w-100" alt="Baner Image">

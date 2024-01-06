@@ -8,12 +8,13 @@ import {
   PaymentMethod,
   User,
 } from '../models/models';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class NavigationService {
-  baseurl = 'https://localhost:7149/api/Shopping/';
+  baseurl = environment.baseurl + 'Shopping/';
 
   constructor(private http: HttpClient) {}
 
