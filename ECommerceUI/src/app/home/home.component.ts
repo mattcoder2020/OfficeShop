@@ -9,14 +9,6 @@ import { SuggestedProduct } from '../models/models';
 export class HomeComponent implements OnInit {
   suggestedProducts: SuggestedProduct[] = [
     {
-      banerimage: 'Baner/Baner_Mobile.png',
-      category: {
-        id: 0,
-        category: 'electronics',
-        subCategory: 'mobiles',
-      },
-    },
-    {
       banerimage: 'Baner/Baner_Laptop.png',
       category: {
         id: 1,
@@ -25,13 +17,22 @@ export class HomeComponent implements OnInit {
       },
     },
     {
-      banerimage: 'Baner/Baner_Chair.png',
+      banerimage: 'Baner/Baner_Mobile.png',
       category: {
-        id: 1,
-        category: 'furniture',
-        subCategory: 'chairs',
+        id: 0,
+        category: 'electronics',
+        subCategory: 'mobiles',
       },
     },
+   
+    // {
+    //   banerimage: 'Baner/Baner_Chair.png',
+    //   category: {
+    //     id: 1,
+    //     category: 'furniture',
+    //     subCategory: 'chairs',
+    //   },
+    // },
   ];
   constructor() {}
 
