@@ -1,4 +1,5 @@
 ﻿using ECommerce.API.DataAccess;
+using ECommerce.API.Helpers;
 using ECommerce.API.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -7,6 +8,7 @@ namespace ECommerce.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [ServiceFilter(typeof(VisitorIpAndActivity))]
     public class ShoppingController : ControllerBase
     {
         readonly IDataAccess dataAccess;

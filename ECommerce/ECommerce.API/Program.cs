@@ -1,4 +1,5 @@
 using ECommerce.API.DataAccess;
+using ECommerce.API.Helpers;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
@@ -39,6 +40,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<IDataAccess, DataAccess>();
+builder.Services.AddScoped<VisitorIpAndActivity>();
+
 
 var app = builder.Build();
 
